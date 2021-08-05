@@ -1,0 +1,368 @@
+/*---Variables---*/
+$background: rgb(43, 43, 43);
+$backgorund-chrome: linear-gradient(
+  90deg,
+  rgba(43, 43, 43, 1) 0%,
+  rgba(88, 88, 88, 1) 49%,
+  rgba(43, 43, 43, 1) 100%
+);
+$backgorund-moz: -moz-linear-gradient(
+  90deg,
+  rgba(43, 43, 43, 1) 0%,
+  rgba(88, 88, 88, 1) 49%,
+  rgba(43, 43, 43, 1) 100%
+);
+$backgorund-o: -o-linear-gradient(
+  90deg,
+  rgba(43, 43, 43, 1) 0%,
+  rgba(88, 88, 88, 1) 49%,
+  rgba(43, 43, 43, 1) 100%
+);
+$backgorund-webkit: -webkit-linear-gradient(
+  90deg,
+  rgba(43, 43, 43, 1) 0%,
+  rgba(88, 88, 88, 1) 49%,
+  rgba(43, 43, 43, 1) 100%
+);
+$backgorund-ms: -ms-linear-gradient(
+  90deg,
+  rgba(43, 43, 43, 1) 0%,
+  rgba(88, 88, 88, 1) 49%,
+  rgba(43, 43, 43, 1) 100%
+);
+
+$font: #f7f7f7;
+
+/*---------Mixing--------*/
+@mixin cero($Margin, $Padding, $Outline) {
+  margin: $Margin;
+  padding: $Padding;
+  outline: $Outline;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: $background !important;
+  background: $backgorund-chrome, $backgorund-moz, $backgorund-ms, $backgorund-o,
+    $backgorund-webkit !important;
+  text-shadow: 0 0.05rem 0.1rem rgba(255, 255, 255, 0.5) !important;
+  box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.5) !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  color: $font;
+}
+br {
+  @include cero(0, 0, 0);
+  outline: 0;
+}
+
+/*-------ESTILOS DE HEADER - NAVBAR-------*/
+li,
+a {
+  font-family: Oxygen, sans-serif;
+  font-weight: 500;
+  font-size: auto;
+  color: #f3f3f3 !important;
+  text-decoration: none !important;
+  text-transform: uppercase;
+}
+#logo {
+  width: auto;
+  height: 6.5rem;
+  transition: transform 0.4s ease-in-out;
+}
+#logo:hover {
+  transform: rotate(180deg);
+}
+.menu {
+  list-style: none;
+}
+.menu li {
+  display: inline-block;
+  padding: 0px 10px;
+}
+.nav-link {
+  text-decoration: none;
+  color: inherit;
+  padding: 2px;
+  position: relative;
+}
+.nav-item a {
+  font-size: 1.3rem;
+}
+.nav-link:after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: ghostwhite;
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  transition: all 0.5s;
+  will-change: width;
+}
+.nav-link:hover:after {
+  width: 98%;
+  right: 0;
+}
+
+/*--------ESTILOS MUSIC PLAYERS-----------*/
+.card_box {
+  margin-left: 10% !important;
+  margin-right: 10% !important;
+}
+.card__music {
+  background-color: transparent !important ;
+  border: none;
+  width: 18rem;
+}
+.card__music--image {
+  max-width: 18rem !important;
+  height: auto;
+  cursor: pointer;
+  filter: saturate(0%);
+  transition: 0.2s ease-in-out;
+}
+.card__music--image:hover {
+  transform: scale(1.1);
+  filter: saturate(100%);
+}
+
+/*-------FOOTER-------*/
+.footer {
+  padding: 40px 0;
+}
+
+.footer .social {
+  justify-content: center;
+  text-align: center;
+  padding-bottom: 25px;
+}
+.footer .social a {
+  font-size: 2.9rem;
+  color: inherit;
+  width: 50px;
+  height: 50px;
+  line-height: 38px;
+  display: inline-block;
+  text-align: center;
+  margin: 0 8px;
+  border-radius: 50%;
+  opacity: 0.75;
+}
+.footer .social a:hover {
+  opacity: 0.9;
+}
+.footer .copyright {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 13px;
+  color: #aaa;
+}
+.footer ul {
+  margin-top: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 0;
+  text-align: center;
+}
+.footer ul li a {
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.8;
+}
+.footer ul li a:hover {
+  opacity: 1;
+  transform: translateY(-3px);
+}
+
+/*---------ESTILOS DE GALERIA NUEVA--------*/
+
+div a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.6;
+  transition: 00.3s ease-in-out;
+  border-radius: 10px;
+}
+div > a > img:hover {
+  opacity: 1;
+  filter: brightness(95%);
+  transition: 0.3s all;
+}
+/*--Media Query Galeria--*/
+@media (min-width: 1280px) {
+  .container-fluid {
+    width: 80% !important;
+    transition: 0.3s ease-in-out;
+  }
+}
+
+/*---------SECCION DISCOGRAFIA--------*/
+.titulo__album {
+  color: whitesmoke;
+  text-transform: uppercase;
+  font-size: 12px;
+  padding: 5px 0;
+  text-align: center;
+}
+.text__album {
+  @include cero(0, 0, 0);
+}
+.album--image {
+  border-radius: 4px;
+  opacity: 0.6;
+  text-decoration: none;
+  box-shadow: 0 1px 3px rgba(255, 255, 255, 0.12),
+    0 1px 2px rgba(255, 255, 255, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.album--image:hover {
+  box-shadow: 0 14px 28px rgba(224, 224, 224, 0.25),
+    0 10px 10px rgba(218, 218, 218, 0.22);
+  opacity: 1;
+}
+
+/*-------TIME LINE----------*/
+.container-timeline {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 0;
+}
+.timeline {
+  width: 80%;
+  height: auto;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+.timeline ul {
+  list-style: none;
+}
+
+.timeline ul li {
+  padding: 20px;
+  background-color: #1e1f2094;
+  color: white;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.timeline-content h2 {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 30px;
+  margin-bottom: 14px;
+}
+.timeline-content p {
+  font-size: 1.3rem;
+  line-height: 25px;
+  font-weight: 100;
+  text-transform: none;
+}
+.timeline-content .date {
+  font-size: 12px;
+  font-weight: 300;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+.timeline_img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+@media only screen and (min-width: 768px) {
+  h3 {
+    font-size: 22px;
+  }
+
+  .timeline:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background-color: rgb(182, 180, 180);
+  }
+  .timeline ul li {
+    width: 50%;
+    position: relative;
+    margin-bottom: 50px;
+  }
+  .timeline ul li:nth-child(odd) {
+    float: left;
+    clear: right;
+    transform: translateX(-30px);
+    border-radius: 20px 0px 20px 20px;
+  }
+  .timeline ul li:nth-child(even) {
+    float: right;
+    clear: left;
+    transform: translateX(30px);
+    border-radius: 0px 20px 20px 20px;
+  }
+  /*---Linea divisoria del Time Line---*/
+  .timeline ul li::before {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: rgb(182, 180, 180);
+    top: 0px;
+  }
+  .timeline ul li:nth-child(odd)::before {
+    transform: translate(50%, -50%);
+    right: -15px;
+  }
+  .timeline ul li:nth-child(even)::before {
+    transform: translate(-50%, -50%);
+    left: -45px;
+  }
+
+  .timeline-content .date {
+    position: absolute;
+    top: -0px;
+  }
+  .timeline ul li:hover::before {
+    background-color: honeydew;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  #logo {
+    width: auto;
+    height: 4.3rem;
+  }
+  .card__music {
+    width: 12rem;
+  }
+  .card__music--image {
+    max-width: 16rem !important;
+  }
+  .footer .social a {
+    font-size: 1.6rem !important;
+  }
+  .ofical li,
+  a {
+    font-size: 11px !important;
+  }
+}

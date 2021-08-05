@@ -1,0 +1,391 @@
+/*---Variables---*/
+/*---------Mixing--------*/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: #2b2b2b !important;
+  background: -webkit-gradient(linear, left top, right top, from(#2b2b2b), color-stop(49%, #585858), to(#2b2b2b)), -moz-linear-gradient(90deg, #2b2b2b 0%, #585858 49%, #2b2b2b 100%), -ms-linear-gradient(90deg, #2b2b2b 0%, #585858 49%, #2b2b2b 100%), -o-linear-gradient(90deg, #2b2b2b 0%, #585858 49%, #2b2b2b 100%), -webkit-linear-gradient(90deg, #2b2b2b 0%, #585858 49%, #2b2b2b 100%) !important;
+  background: linear-gradient(90deg, #2b2b2b 0%, #585858 49%, #2b2b2b 100%), -moz-linear-gradient(90deg, #2b2b2b 0%, #585858 49%, #2b2b2b 100%), -ms-linear-gradient(90deg, #2b2b2b 0%, #585858 49%, #2b2b2b 100%), -o-linear-gradient(90deg, #2b2b2b 0%, #585858 49%, #2b2b2b 100%), -webkit-linear-gradient(90deg, #2b2b2b 0%, #585858 49%, #2b2b2b 100%) !important;
+  text-shadow: 0 0.05rem 0.1rem rgba(255, 255, 255, 0.5) !important;
+  -webkit-box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.5) !important;
+          box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.5) !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  color: #f7f7f7;
+}
+
+br {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  outline: 0;
+}
+
+/*-------ESTILOS DE HEADER - NAVBAR-------*/
+li,
+a {
+  font-family: Oxygen, sans-serif;
+  font-weight: 500;
+  font-size: auto;
+  color: #f3f3f3 !important;
+  text-decoration: none !important;
+  text-transform: uppercase;
+}
+
+#logo {
+  width: auto;
+  height: 6.5rem;
+  -webkit-transition: -webkit-transform 0.4s ease-in-out;
+  transition: -webkit-transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
+}
+
+#logo:hover {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.menu {
+  list-style: none;
+}
+
+.menu li {
+  display: inline-block;
+  padding: 0px 10px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: inherit;
+  padding: 2px;
+  position: relative;
+}
+
+.nav-item a {
+  font-size: 1.3rem;
+}
+
+.nav-link:after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: ghostwhite;
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  will-change: width;
+}
+
+.nav-link:hover:after {
+  width: 98%;
+  right: 0;
+}
+
+/*--------ESTILOS MUSIC PLAYERS-----------*/
+.card_box {
+  margin-left: 10% !important;
+  margin-right: 10% !important;
+}
+
+.card__music {
+  background-color: transparent !important;
+  border: none;
+  width: 18rem;
+}
+
+.card__music--image {
+  max-width: 18rem !important;
+  height: auto;
+  cursor: pointer;
+  -webkit-filter: saturate(0%);
+          filter: saturate(0%);
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+.card__music--image:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-filter: saturate(100%);
+          filter: saturate(100%);
+}
+
+/*-------FOOTER-------*/
+.footer {
+  padding: 40px 0;
+}
+
+.footer .social {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  padding-bottom: 25px;
+}
+
+.footer .social a {
+  font-size: 2.9rem;
+  color: inherit;
+  width: 50px;
+  height: 50px;
+  line-height: 38px;
+  display: inline-block;
+  text-align: center;
+  margin: 0 8px;
+  border-radius: 50%;
+  opacity: 0.75;
+}
+
+.footer .social a:hover {
+  opacity: 0.9;
+}
+
+.footer .copyright {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 13px;
+  color: #aaa;
+}
+
+.footer ul {
+  margin-top: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.footer ul li a {
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.footer ul li a:hover {
+  opacity: 1;
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+}
+
+/*---------ESTILOS DE GALERIA NUEVA--------*/
+div a img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0.6;
+  -webkit-transition: 00.3s ease-in-out;
+  transition: 00.3s ease-in-out;
+  border-radius: 10px;
+}
+
+div > a > img:hover {
+  opacity: 1;
+  -webkit-filter: brightness(95%);
+          filter: brightness(95%);
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+
+/*--Media Query Galeria--*/
+@media (min-width: 1280px) {
+  .container-fluid {
+    width: 80% !important;
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+  }
+}
+
+/*---------SECCION DISCOGRAFIA--------*/
+.titulo__album {
+  color: whitesmoke;
+  text-transform: uppercase;
+  font-size: 12px;
+  padding: 5px 0;
+  text-align: center;
+}
+
+.text__album {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+.album--image {
+  border-radius: 4px;
+  opacity: 0.6;
+  text-decoration: none;
+  -webkit-box-shadow: 0 1px 3px rgba(255, 255, 255, 0.12), 0 1px 2px rgba(255, 255, 255, 0.24);
+          box-shadow: 0 1px 3px rgba(255, 255, 255, 0.12), 0 1px 2px rgba(255, 255, 255, 0.24);
+  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.album--image:hover {
+  -webkit-box-shadow: 0 14px 28px rgba(224, 224, 224, 0.25), 0 10px 10px rgba(218, 218, 218, 0.22);
+          box-shadow: 0 14px 28px rgba(224, 224, 224, 0.25), 0 10px 10px rgba(218, 218, 218, 0.22);
+  opacity: 1;
+}
+
+/*-------TIME LINE----------*/
+.container-timeline {
+  min-height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 100px 0;
+}
+
+.timeline {
+  width: 80%;
+  height: auto;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.timeline ul {
+  list-style: none;
+}
+
+.timeline ul li {
+  padding: 20px;
+  background-color: #1e1f2094;
+  color: white;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.timeline-content h2 {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 30px;
+  margin-bottom: 14px;
+}
+
+.timeline-content p {
+  font-size: 1.3rem;
+  line-height: 25px;
+  font-weight: 100;
+  text-transform: none;
+}
+
+.timeline-content .date {
+  font-size: 12px;
+  font-weight: 300;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+.timeline_img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+  h3 {
+    font-size: 22px;
+  }
+  .timeline:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background-color: #b6b4b4;
+  }
+  .timeline ul li {
+    width: 50%;
+    position: relative;
+    margin-bottom: 50px;
+  }
+  .timeline ul li:nth-child(odd) {
+    float: left;
+    clear: right;
+    -webkit-transform: translateX(-30px);
+            transform: translateX(-30px);
+    border-radius: 20px 0px 20px 20px;
+  }
+  .timeline ul li:nth-child(even) {
+    float: right;
+    clear: left;
+    -webkit-transform: translateX(30px);
+            transform: translateX(30px);
+    border-radius: 0px 20px 20px 20px;
+  }
+  /*---Linea divisoria del Time Line---*/
+  .timeline ul li::before {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #b6b4b4;
+    top: 0px;
+  }
+  .timeline ul li:nth-child(odd)::before {
+    -webkit-transform: translate(50%, -50%);
+            transform: translate(50%, -50%);
+    right: -15px;
+  }
+  .timeline ul li:nth-child(even)::before {
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    left: -45px;
+  }
+  .timeline-content .date {
+    position: absolute;
+    top: -0px;
+  }
+  .timeline ul li:hover::before {
+    background-color: honeydew;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  #logo {
+    width: auto;
+    height: 4.3rem;
+  }
+  .card__music {
+    width: 12rem;
+  }
+  .card__music--image {
+    max-width: 16rem !important;
+  }
+  .footer .social a {
+    font-size: 1.6rem !important;
+  }
+  .ofical li,
+  a {
+    font-size: 11px !important;
+  }
+}
+/*# sourceMappingURL=style.css.map */
