@@ -387,5 +387,9 @@ div > a > img:hover {
   a {
     font-size: 11px !important;
   }
+  .timeline-content p {
+    font-size: 1rem;
+    line-height: 20px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
