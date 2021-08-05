@@ -392,13 +392,18 @@ div > a > img:hover {
   .footer .social a {
     font-size: 1.6rem !important;
   }
-  .ofical li,
-  a {
+  #a-oficial a {
     font-size: 11px !important;
   }
   .timeline-content p {
     font-size: 1rem;
     line-height: 20px;
+  }
+}
+
+@media only screen and (min-width: 520px) {
+  .nav-item a {
+    font-size: 1.7rem !important;
   }
 }
 /*# sourceMappingURL=style.css.map */
